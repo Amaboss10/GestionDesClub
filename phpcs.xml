@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<ruleset>
+    <file>app</file>
+    <arg name="encoding" value="utf-8"/>
+    <arg name="extensions" value="php"/>
+    <rule ref="PSR2"/>
+    <rule>
+        <name>array_push</name>
+        <value>true</value>
+    </rule>
+    <rule>
+        <name>cast_spaces</name>
+        <value>
+            <item key="space">single</item>
+        </value>
+    </rule>
+    <rule>
+        <name>combine_consecutive_issets</name>
+        <value>false</value>
+    </rule>
+    <rule>
+        <name>combine_consecutive_unsets</name>
+        <value>false</value>
+    </rule>
+    <rule>
+        <name>concat_space</name>
+        <value>
+            <item key="spacing">one</item>
+        </value>
+    </rule>
+    <rule>
+        <name>constant_case</name>
+        <value>
+            <item key="case">lower</item>
+        </value>
+    </rule>
+    <rule>
+        <name>declare_equal_normalize</name>
+        <value>
+            <item key="space">single</item>
+        </value>
+    </rule>
+    <rule>
+        <name>declare_strict_types</name>
+        <value>true</value>
+    </rule>
+    <rule>
+        <name>dir_constant</name>
+        <value>true</value>
+    </rule>
+    <rule>
+        <name>native_function_invocation</name>
+        <value>
+            <item key="include">@all</item>
+        </value>
+    </rule>
+    <rule>
+        <name>no_superfluous_elseif</name>
+        <value>false</value>
+    </rule>
+    <rule>
+        <name>no_superfluous_phpdoc_tags</name>
+        <value>false</value>
+    </rule>
+    <rule>
+        <name>php_unit_test_class_requires_covers</name>
+        <value>false</value>
+    </rule>
+    <rule>
+        <name>phpdoc_add_missing_param_annotation</name>
+        <value>false</value>
+    </rule>
+    <rule>
+        <name>phpdoc_order</name>
+        <value>false</value>
+    </rule>
+    <rule>
+        <name>phpdoc_order_by_value</name>
+        <value>false</value>
+    </rule>
+    <rule>
+        <name>phpdoc_var_annotation_correct_order</name>
+        <value>false</value>
+    </rule>
+    <rule>
+        <name>standardize_increment</name>
+        <value>false</value>
+    </rule>
+    <rule>
+        <name>yoda_style</name>
+        <value>false</value>
+    </rule>
+    <rule>
+        <name>blank_line_after_opening_tag</name>
+        <value>false</value>
+    </rule>
+    <rule>
+        <name>blank_line_before_statement</name>
+        <value>
+            <item key="statements">return</item>
+        </value>
+    </rule>
+    <rule>
+        <name>linebreak_after_opening_tag</name>
+        <value>false</value>
+    </rule>
+    <rule>
+        <name>increment_style</name>
+        <value>
+            <item key="style">incrementStyle</item>
+        </value>
+    </rule>
+    <rule ref="PSR2.Classes.ClassDeclaration">
+    <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+    <exclude name="PSR1.Classes.ClassDeclaration.MultipleClasses"/>
+    <exclude name="PSR2.Classes.PropertyDeclaration.Underscore"/>
+    <exclude name="Squiz.Classes.ValidClassName.NotCamelCaps"/>
+    <exclude name="Squiz.Classes.ValidClassName.Suffix"/>
+    <exclude name="PSR2.Classes.ClassDeclaration.OpenBraceAfterClass"/>
+    <exclude name="PSR2.Classes.PropertyDeclaration"/>
+    <exclude name="PSR2.Classes.PropertyDeclaration.Static"/>
+    <exclude name="PSR2.Classes.ClassDeclaration.Empty"/>
+    <exclude name="PSR2.Methods.FunctionCallSignature"/>
+    <exclude name="PSR2.Methods.MethodDeclaration"/>
+    <exclude name="PSR2.Methods.MethodDeclaration.Scope"/>
+    <exclude name="PSR2.Methods.FunctionClosingBrace"/>
+    <exclude name="PSR2.Methods.MethodArgumentSpace.NoneBefore"/>
+    <exclude name="PSR2.Methods.MethodArgumentSpace.SingleLine"/>
+    <exclude name="PSR2.Methods.MethodArgumentSpace.SameLine"/>
+    <exclude name="PSR2.Methods.FunctionCallSignature.SpaceBeforeCloseBracket"/>
+    <exclude name="PSR2.Methods.MethodDeclaration.SpaceBeforeCloseParenthesis"/>
+    <exclude name="PSR2.Methods.MethodDeclaration.CamelCaseMethodName"/>
+    <exclude name="PSR2.Methods.MethodDeclaration.Abstract"/>
+    <exclude name="PSR2.Methods.MethodDeclaration.Final"/>
+    <exclude name="PSR2.Methods.MethodDeclaration.Static"/>
+    <exclude name="PSR2.Properties.PropertyDeclaration.Underscore"/>
+    <exclude name="PSR2.Properties.PropertyDeclaration.Static"/>
+    <exclude name="PSR2.Properties.PropertyDeclaration.ScopeSpacing"/>
+    <exclude name="PSR2.Properties.PropertyDeclaration.SemicolonAfter"/>
+</rule>
+</ruleset>
