@@ -45,3 +45,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/identite', 'App\Http\Controllers\ControleurMembres@identite');
 Route::get('/protege', 'App\Http\Controllers\ControleurMembres@acces_protege')
 ->middleware('auth');
+
+Route::get('/admin/users', 'AdminUserController@index')->name('admin.users.index');
+
+Route::post('/admin/users/approve/{id}', 'AdminUserController@approve')->name('admin.users.approve');
+
+
+
+

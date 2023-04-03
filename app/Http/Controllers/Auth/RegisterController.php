@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -68,6 +69,27 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'role' => 'user',
+            'approved' => false,
         ]);
+
+        // Si l'utilisateur est enregistré avec succès, rediriger vers la page de connexion
+        return redirect('/login');
+        
+    }
+
+    public function approve(User $user)
+    {
+        // Vérifier que l'utilisateur connecté est un administrateur
+        if (Auth::user()->role !== 'admin') {
+            return abort(403, 'Vous n\'êtes pas autorisé à approuver des utilisateurs.');
+        }
+
+        // Marquer l'utilisateur comme approuvé
+        $user->approved = true;
+        $user->save();
+
+        // Rediriger vers la liste des utilisateurs
+        return redirect('/users');
     }
 }
